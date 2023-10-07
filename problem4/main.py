@@ -1,5 +1,11 @@
 def ubah_huruf(sentence):
     pattern = ""
+    for i in range (len(sentence)) :
+        teks=sentence[i]
+        if teks.isupper() :
+            pattern += chr((ord(teks)+10-65) % 26 +65)
+        elif teks ==' ':
+            pattern +=' '
     return pattern
 
 if __name__ == '__main__':
