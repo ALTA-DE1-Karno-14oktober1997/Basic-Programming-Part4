@@ -18,4 +18,3 @@ if __name__ == '__main__':
     print(mean_median([7, 8, 9, 13, 15])) # (10.4, 9)
     print(mean_median([10, 20, 30, 40, 50])) # (30.0, 30)
     print(mean_median([15, 20, 30, 60, 120])) # (49.0, 30)
-    print(mean_median([]))
