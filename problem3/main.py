@@ -1,10 +1,16 @@
 def cetak_table_perkalian(number):
     pattern = ""
+    max_chars = 190  # Jumlah maksimal karakter per baris
     for i in range(1, number + 1):
+        row = ""
         for j in range(1, number + 1):
             result = i * j
-            pattern += f'{result} '
-        pattern += '\n'
+            entry = f'{result} '
+            if len(row) + len(entry) <= max_chars:
+                row += entry
+            else:
+                break
+        pattern +=' '+ row.rstrip() + '\n'
     return pattern
 
 if __name__ == '__main__':
